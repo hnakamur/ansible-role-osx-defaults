@@ -92,14 +92,14 @@ try:
 except ImportError:
     import simplejson as json
 
-import logging
-import logging.handlers
-
-logger = logging.getLogger("osx_defaults")
-logger.setLevel(logging.WARNING)
-logger.addHandler( logging.FileHandler("osx_defaults.debug.log") )
+#import logging
+#import logging.handlers
+#
+#logger = logging.getLogger("osx_defaults")
+#logger.setLevel(logging.WARNING)
+#logger.addHandler( logging.FileHandler("osx_defaults.debug.log") )
 def debug(msg):
-    logger.warning(msg)
+    #logger.warning(msg)
     pass
 
 class OSXBool(object):
