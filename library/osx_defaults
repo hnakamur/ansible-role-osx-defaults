@@ -37,7 +37,7 @@ options:
     required: true
   type:
     description:
-      - The type of value to write
+      - The type of value to write. Currently only bool[ean] and string are supported (Pull requests are welcome!).
     required: false
   value:
     description:
@@ -155,7 +155,7 @@ class OSXDefaults(object):
         elif self.type == 'bool' or self.type == 'boolean':
             self.osx_value = OSXBool(self.module.boolean(self.value))
         else:
-            self.module.fail_json(msg='Currently only type=bool[ean] or string is supported. Pull requests are welcome!')
+            self.module.fail_json(msg='Currently only type=bool[ean] or string are supported. Pull requests are welcome!')
 
     def _exec(self, args, run_in_check_mode=False, check_rc=True):
         if not self.module.check_mode or (self.module.check_mode and run_in_check_mode):
@@ -175,7 +175,7 @@ class OSXDefaults(object):
         elif type == 'bool' or type == 'boolean':
             return OSXBool.from_arg(data)
         else:
-            self.module.fail_json(msg='Currently only type=bool[ean] or string is supported. Pull requests are welcome!')
+            self.module.fail_json(msg='Currently only type=bool[ean] or string are supported. Pull requests are welcome!')
 
     def read(self):
         rc, type_out = self._exec(['read-type', self.domain, self.key], True, False)
