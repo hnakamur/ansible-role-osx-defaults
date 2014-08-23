@@ -11,7 +11,16 @@ None.
 Role Variables
 --------------
 
-None.
+## values to set for Finder
+
+osx_defaults_finder_values:
+  - { domain: com.apple.finder, key: AppleShowAllFiles, type: boolean, value: true, state: present }
+  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: string, value: true, state: present }
+
+## values to set for SystemUIServer
+
+osx_defaults_system_ui_server_values:
+  - { domain: com.apple.screencapture, key: disable-shadow, type: boolean, value: true, state: present }
 
 Dependencies
 ------------
