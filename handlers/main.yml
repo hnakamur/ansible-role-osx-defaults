@@ -1,0 +1,7 @@
+---
+# handlers file for hnakamur.osx_defaults
+- name: killall Finder
+  command: killall Finder
+
+- name: killall SystemUIServer
+  command: killall SystemUIServer

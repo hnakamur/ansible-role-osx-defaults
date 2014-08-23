@@ -1,0 +1,13 @@
+---
+# tasks file for hnakamur.osx_defaults
+- osx_defaults: domain=com.apple.finder key=AppleShowAllFiles type=boolean value=true state=present
+#- osx_defaults: domain=com.apple.finder key=AppleShowAllFiles state=absent
+  notify: killall Finder
+
+- osx_defaults: domain=com.apple.desktopservices key=DSDontWriteNetworkStores type=string value=true state=present
+#- osx_defaults: domain=com.apple.desktopservices key=DSDontWriteNetworkStores state=absent
+  notify: killall Finder
+
+- osx_defaults: domain=com.apple.screencapture key=disable-shadow type=boolean value=true state=present
+#- osx_defaults: domain=com.apple.screencapture key=disable-shadow state=absent
+  notify: killall SystemUIServer
