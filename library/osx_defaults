@@ -248,7 +248,7 @@ def main():
             changed = True
             defaults.delete()
 
-    module.exit_json(changed=changed)
+    module.exit_json(changed=changed, domain=domain, key=key, type=type, value=value, state=state)
 
 # import module snippets
 from ansible.module_utils.basic import *
