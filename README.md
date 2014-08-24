@@ -1,4 +1,4 @@
-osx_defaults
+osx-defaults
 ============
 
 An Ansible role to set the OS X user defaults
@@ -33,7 +33,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: hnakamur.osx_defaults }
+         - { role: hnakamur.osx-defaults }
 
 License
 -------
